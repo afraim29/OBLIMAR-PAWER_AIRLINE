@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<link rel="stylesheet" type="text/css" href="styleboard.css">
+
+</head>
+<body style="background-color: #BCE0FD">
+
+<div class="topnav" id="mycontainer">
+        <div>
+            <div>
+                <a class="active" href="home.html">Home</a>
+            </div>
+        </div>
+        <div>
+                <div>
+                    <a href="addons.html">Add-Ons </a>
+                </div>
+            </div>
+
+        <div>
+            <div>
+                <a href="#BoardingPass" class="gray">Boarding Pass</a>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <a href="restriction2.html">Baggage Restriction</a>
+            </div>
+        </div>
+        <div>
+            <div>
+                <a href="location2.html">Baggage Location</a>
+            </div> 
+        </div>
+       
+        
+        <div>
+            <div>
+                <a href="#" onclick="myOut()">Logout</a>
+            </div>
+         </div>
+</div>
+    
+        <!-- <div class="container">
+                <ul class="progressbar">
+                    <li class="active">login</li>
+                    <li class="active">Reference Number</li>
+                    <li>Boarding Pass</li>
+                    <li>Baggage Restriction</li>
+                    <li>Baggage Location</li>
+                    <li>Done</li>
+            </ul>
+        </div>
+     -->
+     <!-- <div class="printbutton">
+     <input type="button" onclick="printDiv('print-content')" value="Print" class="print"/>
+    </div>
+     <div class="loginbox">
+            <form action="reference.html" id="print-content" >
+                   
+
+                        <div style="float:left; position:relative; margin-right:40px">
+                                <img src="qr.png" alt="" class="logo" style="display:none">
+                                
+                        </div>
+                          
+                        <div style="position:relative">
+                                asdasdasasdasd
+                            </div>
+                    </div>
+
+            </form>
+    </div> -->
+
+     <div class="confirm" style="text-align: center">
+            <input type="button" value="Confirm" class="print"/>
+     </div>
+            <div class='flight-card'>
+                    <div class='flight-card--header'>
+                    <div>
+                        <span>
+                           <p> <img src="logo.png" alt="" class="logoplane" align="middle">Pawer Airline</p>
+                        </span>
+                    </div>
+                    <div> 
+                    
+                       
+                       <span class="to">To: HOUSTON</span>
+                       <span></span>
+                       <span class="from">MANILA</span>
+                   </div>
+            <div>
+                <span class="qr">
+                    <img src="qr.png" alt="" class="logo">
+                </span>
+            </div>
+            <div>
+                   
+                    <table>
+                            <tr>
+                                <td>
+                                    <b>Passenger Name</b><br>
+                                    Cong Kuricong
+                                </td>
+                                <td>
+                                    <b>Date</b><br>
+                                    June 14 2019
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                    <b>Flight Number</b><br>
+                                    CXD101
+                              </td>
+                              <td>
+                                    <b>Gate</b><br>
+                                    15
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                  <b>Seat Number</b><br>
+                                  29B
+                              </td>
+                              <td>
+                                  <b>Boarding Time</b><br>
+                                  23:30
+                                </td>
+                            </tr>
+                            
+                          </table>
+                          
+  
+</body>
+<script type="text/javascript">
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        w=window.open();
+        w.document.write(printContents);
+        w.print();
+        w.close();
+    }
+
+    window.onscroll = function() {myFunction()};
+                                    
+                                    var header = document.getElementById("mycontainer");
+                                    var sticky = header.offsetTop;
+                                                            
+                                        function myFunction() {
+                                            if (window.pageYOffset > sticky) {
+                                                 header.classList.add("sticky");
+                                             } else {
+                                                      header.classList.remove("sticky");
+                                                     }
+                                            }
+                        
+   function myOut(){
+       if(confirm("Are you sure you want to logout?")){
+           location.href = "login2.html";
+       }
+   }                                     
+</script>
+</html>

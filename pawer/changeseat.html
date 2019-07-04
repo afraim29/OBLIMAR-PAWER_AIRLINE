@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#out{
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+
+
+  font-size: 17px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #2699FB;
+ 
+}
+
+.topnav a {     
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 58px;   
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav .gray{
+  background-color: gray;
+  color: black;
+  pointer-events: none;
+}
+
+/* .topnav a.active {
+  background-color: #2699FB;
+  color: white;
+} */
+
+ 
+.progressbar {
+      counter-reset: step;
+   
+  }
+  .progressbar li {
+      list-style-type: none;
+      width: 15%;
+      float: left;
+      font-size: 12px;
+      text-align: center;
+      text-transform: uppercase;
+      color: black;
+      font-weight: bold;
+  }
+  .progressbar li:before {
+      width: 30px;
+      height: 30px;
+      content: counter(step);
+      counter-increment: step;
+      line-height: 30px;
+      border: 2px solid #7d7d7d;
+      display: block;
+      text-align: center;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      background-color: white;
+  }
+ 
+  .progressbar li:first-child:after {
+      content: none;
+  }
+  .progressbar li.active {
+      color: black;
+      font-weight: bold;
+    
+  }
+  .progressbar li.active:before {
+      border-color: green;
+      background-color: rgb(187, 255, 187);
+  }
+  .progressbar li.active + li:after {
+      background-color: #55b776;
+  }
+ 
+#myConfirm {
+    border: 0;
+    outline: none;
+    height: 40px;
+    background-color: #cccccc;
+    width: 350px;
+    /* cursor:pointer; */
+    color: white;
+}
+
+#myCancel {
+    border: 0;
+    outline: none;
+    height: 40px;
+    background-color: #2699FB;
+    width: 350px;
+    cursor:pointer;
+    color: white;
+}
+
+#outer
+{
+    width:100%;
+    text-align: center;
+}
+.inner
+{
+    display: inline-block;
+}
+
+.flight-card {
+    width: 800px;
+    height: 350px;
+    border-radius: 10px;
+    margin: 10px auto;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    background: #BCE0FD;
+    top:15%;
+    left:16.5%;
+    position: absolute;
+    padding: 2%;
+    z-index: -1;
+    
+  }
+
+
+  .buttonplace{
+    text-align: center;
+  }
+ .buttonrestric{
+     border: 0;
+    outline: none;
+    height: 40px;
+    background-color: #2699FB;
+    color: white;
+    width: 350px;
+    cursor:pointer;
+ }
+
+.logoalign{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.paragraphmargin{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #2699FB;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+.header {
+  background: #2699FB;
+  height: 90px;
+  padding-top: 0.1%; 
+}
+.myConfirm{
+
+border: 0;
+outline: none;
+height: 40px;
+background-color: #2699FB;
+/* cursor:pointer; */
+}
+
+.column {
+  float: left;
+  width: 47.5%;
+  padding: 10px;
+ 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.logo{
+position: relative;
+
+}
+
+/* .banner { background-color: #000; } */
+
+.wrapper { width: 150%;
+    }
+
+.banner p {
+  font-family: "Gentium Basic";
+  font-size: 19px;
+  width: 350px;
+  color: #aaa;
+  margin-top: -10px;
+  display: block;
+ }
+.banner img {
+  float: left; 
+  margin: 20px;
+  width: 120px;
+ }
+ .banner span {
+  padding-top: 50px;
+  font-size: 17px;
+  
+ }
+  .banner .ban2 span {
+     
+  padding-top: 50px;
+  
+  font-size: 17px;
+  vertical-align:top;
+ }
+
+ .buttonConfirm{
+    float: left;
+    margin-left: 40px;
+ }
+ 
+ .buttonCancel{
+    float: right;
+    margin-right: 50px;
+ }
+ .addbag{
+text-align: center;
+
+ }
+ .radioButtons{
+     margin-bottom: 20px;
+ }
+ table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #535050;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  /* background-color: #dddddd; */
+}
+
+.seat{
+  width: 20px;
+  height: 20px;
+  background:#2699FB;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+
+<!-- <div class="topnav">
+    <div class=>
+         <a class="active" href="#home">Home</a>
+    </div>
+        <div>
+            <a href="boarding.html">Boarding Pass</a>
+        </div>
+        <div>
+            <a href="restriction.html" class="gray">Baggage Restriction</a>
+        </div>
+        <div>
+            <a href="location.html">Baggage Location</a>
+        </div>
+        <div>
+                <a href="#about">Contact</a>
+        </div>
+        <div>
+                <a href="logout">Logout</a>
+            </div>
+</div> -->
+                
+            <!-- <div>
+                <div><div class="header" id="mycontainer2">
+                        <div class="container" id="mycontainer">
+                                <ul class="progressbar">
+                                    <li class="active">login</li>
+                                    <li class="active">Reference Number</li>
+                                    <li class="active">Boarding Pass</li>
+                                    <li>Baggage Restriction</li>
+                                    <li>Baggage Location</li>
+                                    <li>Done</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>    
+            </div> -->
+            <div class="topnav" id="mycontainer">
+                    <div>
+                        <div>
+                            <a class="gray">Change Seat</a>
+                        </div>
+                    </div>
+                                                     
+            <div class='flight-card'>        
+<table>
+        <tr>
+          <th><div class="seat">a1</div></th>
+          <th><div class="seat">a2</div></th>
+          <th><div class="seat">a3</div></th>
+          <th><div class="seat">g1</div></th>
+          <th><div class="seat">g2</div></th>
+          <th><div class="seat">g3</div></th>
+        </tr>
+        <tr>
+          <th><div class="seat">b1</div></th>
+          <th><div class="seat">b2</div></th>
+          <th><div class="seat">b3</div></th>
+          <th><div class="seat">h1</div></th>
+          <th><div class="seat">h2</div></th>
+          <th><div class="seat">h3</div></th>
+        </tr>
+        <tr>
+          <th><div class="seat">c1</div></th>
+          <th><div class="seat">c2</div></th>
+          <th><div class="seat">c4</div></th>
+          <th><div class="seat">i1</div></th>
+          <th><div class="seat">i2</div></th>
+          <th><div class="seat">i3</div></th>
+        </tr>
+        <tr>
+          <th><div class="seat">d1</div></th>
+          <th><div class="seat">d2</div></th>
+          <th><div class="seat">d3</div></th>
+          <th><div class="seat">j1</div></th>
+          <th><div class="seat">j2</div></th>
+          <th><div class="seat">j3</div></th>
+        </tr>
+        <tr>
+          <th><div class="seat">e1</div></th>
+          <th><div class="seat">e2</div></th>
+          <th><div class="seat">e3</div></th>
+          <th><div class="seat">k1</div></th>
+          <th><div class="seat">k2</div></th>
+          <th><div class="seat">k3</div></th>
+        </tr>
+        <tr>
+          <th><div class="seat">f1</div></th>
+          <th><div class="seat">f2</div></th>
+          <th><div class="seat">f3</div></th>
+          <th><div class="seat">l1</div></th>
+          <th><div class="seat">l2</div></th>
+          <th><div class="seat">l3</div></th>
+        </tr>
+      
+      </table>
+                    <div class="row">
+                            <div class="column">
+                                <div class="column">
+                                        <div class="banner">
+                                                <div class="wrapper">
+                                                        <input type="button" value="Confirm" id="myConfirm" class="myConfirm" onclick="myAdd()"/>
+                                                </div>
+                                            </div>
+                                </div>                         
+                             </div>
+
+                             <div class="column">
+                                    <div class="column">
+                                            <div class="banner">
+                                                    <div class="wrapper">
+                                                            <input type="button" value="Cancel" id="myCancel" class="myConfirm"/>
+                                                    </div>
+                                                </div>
+                                    </div>                         
+                                 </div>
+                    </div>        
+
+                       
+        
+         
+<script>
+
+   function myClick(){
+                    var checkBox = document.getElementsByName("kilo")
+                    
+                        if(checkBox.checked == true)
+                        {
+                        }
+                        else
+                        {
+                            document.getElementById("myConfirm").style.backgroundColor = "#2699FB";
+                            document.getElementById("myConfirm").style.color = "white";
+                            document.getElementById("myConfirm").onclick = function()
+                            {
+                              if(confirm("Are you sure you want to add this baggage?")){
+                                location.href = "addons.html";
+                            }
+                            }
+                        }
+
+                    
+                }
+                document.getElementById("myCancel").onclick = function()
+                            {
+                                location.href = "addons.html";
+                            }
+
+
+</script>
+                                
+</body>
+</html>

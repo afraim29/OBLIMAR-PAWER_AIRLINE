@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<style>
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+
+#myConfirm {
+    border: 0;
+    outline: none;
+    height: 40px;
+    background-color: #2699FB;
+    color: white;
+    width: 350px;
+    cursor:pointer;
+    margin-top: 20px;
+}
+
+
+.flight-card {
+    width: 400px;
+    height: 850px;
+    border-radius: 10px;
+    margin: 10px auto;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    background: #BCE0FD;
+    top:5%;
+    left:32%;
+    position: absolute;
+    padding: 2%;
+    z-index: -1;
+    
+  }
+
+.textboxes{
+    margin-bottom: 10px;
+    
+}
+.textboxalign{
+    text-align: center
+}
+
+label{
+    font-size: 13px;
+    color: #403D3D;
+}
+#cancelled{
+font-size: 13px;
+color: #2699FB;
+cursor: pointer;
+
+}
+
+</style>
+</head>
+<body>
+                      
+            <div class='flight-card'>
+            <!-- <form action="thanks.html">       -->
+            <div>
+                    <label for="">My Card List</label>
+            </div>      
+            <div>
+                <div>
+                    <input type="text" class="textboxes" size="55" required placeholder="MC(MasterCard) - XXXXXXXXXXXXX1234">
+                </div>
+            </div>
+            <div>
+                <label for="">Card Number</label>
+            </div>      
+            <div>
+                <div>
+                     <input type="text" class="textboxes" size="55" required placeholder="XXXXXXXXXXXXX1234">
+                </div>
+            </div>
+            <div>
+                <label for="">Expiration Date</label>
+            </div>      
+            <div>
+                <div>
+                    <input type="date" class="textboxes" size="55" required>
+                </div>
+            </div>
+            <div>
+                <label for="">CVC</label>
+            </div>      
+            <div>
+                <div>
+                    <input type="text" class="textboxes" size="55" required>
+                </div>
+            </div>
+            <div>
+                <label for="">First Name</label>
+            </div>      
+            <div>
+                <div>
+                    <input type="text" class="textboxes" size="55" required>
+                </div>
+            </div>
+            <div>
+                <label for="">Last Name</label>
+            </div>      
+            <div>
+                <div>
+                    <input type="text" class="textboxes" size="55" required>
+                </div>
+            </div>
+
+            <div>
+                <label for="">Street Address</label>
+            </div>      
+            <div>
+                <div>
+                    <input type="text" class="textboxes" size="55" required>
+                </div>
+            </div>
+            <div>
+                <label for="">Zip Code</label>
+            </div>      
+            <div>
+                <div>
+                    <input type="text" class="textboxes" size="55" required>
+                </div>
+            </div>
+            <div>
+                <label for="">City</label>
+            </div>      
+            <div>
+                <div>
+                    <input type="text" class="textboxes" size="55" required>
+                </div>
+            </div>
+            <div>
+                <label for="">Country</label>
+            </div>      
+            <div>
+                <div>
+                    <input type="text" class="textboxes" size="55" required>
+                </div>
+            </div>
+            <div>
+                <label for="">State/Region</label>
+            </div>      
+            <div>
+                <div>
+                    <input type="text" class="textboxes" size="55" required>
+                </div>
+            </div>
+            <div>
+                <label for="">Email Address</label>
+            </div>      
+            <div>
+                <div>
+                    <input type="text" class="textboxes" size="55" required placeholder="....@yahoo.com">
+                </div>
+            </div>
+            <div>
+                <label for="">Contact Number</label>
+            </div>      
+            <div>
+                <div>
+                    <input type="text" class="textboxes" size="55" required>
+                </div>
+            </div>      
+            <div>
+                <label for=""><b>Disclaimer:</b> Pawer Airlines authenticates all debit and credit card transactions and reserves the right to refuse you or your baggage if, in the exercise of reasonable discretion, we determine that the payment of your fare has been done fraudulently or unlawfully. Some banks may charge additional fees for this transaction.</label>
+            </div>      
+             
+  
+                        <div style="text-align: center" class="confirmnext">
+                                <div>
+                                    <div>
+                                        <span> <input type="submit" value="Confirm" id="myConfirm" onclick="myConfirm()"/></span>
+  
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="text-align: center" class="confirmnext">
+                                    <div>
+                                        <div style="margin-top: 10px">
+                                            <span> <label for="" id="cancelled" onclick="myCancel()"><u> Cancel</u></label></span>
+      
+                                        </div>
+                                    </div>
+                                </div>
+        
+
+                            
+                        <!-- </form>           -->
+<script>
+
+function myCancel(){
+       if(confirm("Are you sure you want to cancel payment?")){
+           location.href = "addons.html";
+       }
+   }
+
+   function myConfirm(){
+       if(confirm("Are you sure you want to confirm payment?")){
+           location.href = "thanks.html";
+       }
+   }
+
+
+</script>
+                                
+</body>
+</html>

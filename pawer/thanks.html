@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    <title></title>
+    
+<style>
+.loginbox{
+    height: 440px;
+    width: 705px;
+    background: #BCE0FD;
+    border-radius: 5%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 60px 40px;
+    
+}
+#done {
+    border: 0;
+    outline: none;
+    height: 40px;
+    background-color: #2699FB;
+    width: 350px;
+    cursor:pointer;
+    color: white;
+    margin: 20px;
+}
+.buttonalign{
+    text-align: center;
+}
+</style>    
+</head>
+
+
+<body background="bg.jpg">
+
+    <form action="home.html">
+        <div class="loginbox">
+            <img src="ty.jpg" alt="">  
+            <div class="buttonalign">
+                <input type="button" name="Done" id="done" value="Done">
+            </div>  
+        </div>
+      
+    </form>
+    
+<script>
+    document.getElementById("done").onclick = function()
+                            {
+            location.href = "home.html";
+                            }
+</script>
+
+
+</body>
+</html>

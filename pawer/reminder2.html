@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#out{
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+
+
+  font-size: 17px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #2699FB;
+ 
+}
+
+.topnav a {     
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 58px;   
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav .gray{
+  background-color: gray;
+  color: black;
+  pointer-events: none;
+}
+
+/* .topnav a.active {
+  background-color: #2699FB;
+  color: white;
+} */
+
+ 
+.progressbar {
+      counter-reset: step;
+   
+  }
+  .progressbar li {
+      list-style-type: none;
+      width: 15%;
+      float: left;
+      font-size: 12px;
+      text-align: center;
+      text-transform: uppercase;
+      color: black;
+      font-weight: bold;
+  }
+  .progressbar li:before {
+      width: 30px;
+      height: 30px;
+      content: counter(step);
+      counter-increment: step;
+      line-height: 30px;
+      border: 2px solid #7d7d7d;
+      display: block;
+      text-align: center;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      background-color: white;
+  }
+ 
+  .progressbar li:first-child:after {
+      content: none;
+  }
+  .progressbar li.active {
+      color: black;
+      font-weight: bold;
+    
+  }
+  .progressbar li.active:before {
+      border-color: green;
+      background-color: rgb(187, 255, 187);
+  }
+  .progressbar li.active + li:after {
+      background-color: #55b776;
+  }
+ 
+#myConfirm {
+    border: 0;
+    outline: none;
+    height: 40px;
+    background-color: #2699FB;
+    width: 350px;
+    cursor:pointer;
+    color: white;
+}
+
+#outer
+{
+    width:100%;
+    text-align: center;
+}
+.inner
+{
+    display: inline-block;
+}
+
+.flight-card {
+    width: 800px;
+    height: 550px;
+    border-radius: 10px;
+    margin: 10px auto;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    background: #BCE0FD;
+    top:15%;
+    left:16.5%;
+    position: absolute;
+    padding: 2%;
+    z-index: -1;
+    
+  }
+
+
+  .buttonplace{
+    text-align: center;
+  }
+ .buttonrestric{
+     border: 0;
+    outline: none;
+    height: 40px;
+    background-color: #2699FB;
+    color: white;
+    width: 350px;
+    cursor:pointer;
+ }
+
+.logoalign{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.paragraphmargin{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #2699FB;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+.header {
+  background: #2699FB;
+  height: 90px;
+  padding-top: 0.1%; 
+}
+.myConfirm{
+
+border: 0;
+outline: none;
+height: 40px;
+background-color: #2699FB;
+cursor:pointer;
+}
+
+</style>
+</head>
+<body>
+
+<!-- <div class="topnav">
+    <div class=>
+         <a class="active" href="#home">Home</a>
+    </div>
+        <div>
+            <a href="boarding.html">Boarding Pass</a>
+        </div>
+        <div>
+            <a href="restriction.html" class="gray">Baggage Restriction</a>
+        </div>
+        <div>
+            <a href="location.html">Baggage Location</a>
+        </div>
+        <div>
+                <a href="#about">Contact</a>
+        </div>
+        <div>
+                <a href="logout">Logout</a>
+            </div>
+</div> -->
+                
+            <!-- <div>
+                <div><div class="header" id="mycontainer2">
+                        <div class="container" id="mycontainer">
+                                <ul class="progressbar">
+                                    <li class="active">login</li>
+                                    <li class="active">Reference Number</li>
+                                    <li class="active">Boarding Pass</li>
+                                    <li>Baggage Restriction</li>
+                                    <li>Baggage Location</li>
+                                    <li>Done</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>    
+            </div> -->
+                                
+            <div class='flight-card'>
+                    
+                        
+
+                        <div>
+                                <div>
+                                    <div>
+                                        <p class="paragraphmargin">A. Security Removed Items</p>
+                                        <p>These are items taken at a security check from a guest or from his/her hand baggage 
+                                            because they are not allowed to be carried at all as these items are classified as 
+                                            weapons or Dangerous Goods.</p>
+                                            <div>
+                                                <div>
+                                                    <ul>
+                                                        <li>Some items can only be accepted as checked baggage (sharp, pointed, blunt objects, tools or any toys imitating one of these items).</li>
+                                                        <li>This information is available at any check-in touch point; therefore once a guest declares, request the guest to include the item in his check-in baggage.</li>
+                                                        <li>At security control any forbidden object detected is confisticated from the guest and disposed off.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                    <div>
+                                        <div>
+                                            <p class="paragraphmargin">B. Arms and Ammunition</p>
+                                            <p>Arms and Ammunition are not allowed as cabin baggage unless authorized by Head of Security.</p>
+                                                <div>
+                                                    <ul>
+                                                        <li>It is not allowed to hold firearms and/or other sorts of arms like daggers, flick knives and other offensive articles in the cabin, except those carried by authorized personnel as per procedures documented in the Corporate Security Program.</li>
+                                                        <li>Therefore, passengers should be advised at check-in not to carry any offensive articles neither on ones person nor in hand baggage, but to pack these items as advised for check-in purposes.</li>
+                                                        <li>Firearms and ammunitions (for sporting purposes, law Enforcement officers, authorized persons) may only be accepted as checked baggage when the passenger is in possession of the necessary export, transit and import permits.</li>
+                                                        <li>The Passenger is responsible for obtaining all required permits and documentation.</li>
+                                                        <li>IATA Dangerous Goods Regulations apply.</li>
+                                                    </ul>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        <div style="text-align: center" class="confirmnext">
+                                <div>
+                                    <div>
+                                        <input type="button" value="Confirm" id="myConfirm" class="myConfirm"/>
+                                    </div>
+                                </div>
+                            </div>
+        
+         
+<script>
+    
+
+                document.getElementById("myConfirm").onclick = function()
+                            {
+                                location.href = "restriction2.html";
+                            }
+               
+
+
+</script>
+                                
+</body>
+</html>

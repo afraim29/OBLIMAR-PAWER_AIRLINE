@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<link rel="stylesheet" type="text/css" href="styleboard.css">
+
+</head>
+<body>
+    <div>
+        <div>
+            <div class="header" id="mycontainer2">
+                <div class="container" id="mycontainer">
+                        <ul class="progressbar">
+                            <li class="active">login</li>
+                            <li class="active">Reference Number</li>
+                            <li>Boarding Pass</li>
+                            <li>Baggage Restriction</li>
+                            <li>Baggage Location</li>
+                            <li>Done</li>
+                    </ul>
+                </div>
+            </div>
+        </div>    
+    </div>
+     <!-- <div class="printbutton">
+     <input type="button" onclick="printDiv('print-content')" value="Print" class="print"/>
+    </div>
+     <div class="loginbox">
+            <form action="reference.html" id="print-content" >
+                   
+
+                        <div style="float:left; position:relative; margin-right:40px">
+                                <img src="qr.png" alt="" class="logo" style="display:none">
+                                
+                        </div>
+                          
+                        <div style="position:relative">
+                                asdasdasasdasd
+                            </div>
+                    </div>
+
+            </form>
+    </div> -->
+
+     <div class="confirm" style="text-align: center">
+            <input type="button" value="Confirm" class="print" id="myConfirm"/>
+     </div>
+            <div class='flight-card'>
+                    <div class='flight-card--header'>
+                    <div>
+                        <span>
+                           <p> <img src="logo.png" alt="" class="logoplane" align="middle">Pawer Airline</p>
+                        </span>
+                    </div>
+                    <div> 
+                    
+                       
+                       <span class="to">To: HOUSTON</span>
+                       <span></span>
+                       <span class="from">MANILA</span>
+                   </div>
+            <div>
+                <span class="qr">
+                    <img src="qr.png" alt="" class="logo">
+                </span>
+                <table>
+                        <tr>
+                            <td>
+                                <b>Passenger Name</b><br>
+                                Cong Kuricong
+                            </td>
+                            <td>
+                                <b>Date</b><br>
+                                June 14 2019
+                            </td>
+                        </tr>
+                        <tr>
+                          <td>
+                                <b>Flight Number</b><br>
+                                CXD101
+                          </td>
+                          <td>
+                                <b>Gate</b><br>
+                                15
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <b>Seat Number</b><br>
+                              29B
+                          </td>
+                          <td>
+                              <b>Boarding Time</b><br>
+                              23:30
+                            </td>
+                        </tr>
+                        
+                      </table>
+  
+</body>
+<script type="text/javascript">
+     window.onscroll = function() {myFunction()};
+                                    
+                                    var header = document.getElementById("mycontainer");
+                                    var sticky = header.offsetTop;
+                                                            
+                                        function myFunction() {
+                                            if (window.pageYOffset > sticky) {
+                                                 header.classList.add("sticky");
+                                             } else {
+                                                      header.classList.remove("sticky");
+                                                     }
+                                            }
+                        
+                                            window.onscroll = function() {myFunction()};
+                                                            
+                                                            var header = document.getElementById("mycontainer2");
+                                                            var sticky = header.offsetTop;
+                                                                                    
+                                                                function myFunction() {
+                                                                    if (window.pageYOffset > sticky) {
+                                                                         header.classList.add("sticky");
+                                                                     } else {
+                                                                              header.classList.remove("sticky");
+                                                                             }
+                                                                    }
+                                    document.getElementById("myConfirm").onclick = function(){
+                                        location.href = "restriction.html";
+                                    }
+</script>
+</html>

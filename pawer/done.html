@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<link rel="stylesheet" type="text/css" href="styleloc2.css">
+</head>
+<body>
+    
+                    <div>
+                        <div>
+                            <div class="header" id="mycontainer2">
+                                <div class="container" id="mycontainer">
+                                        <ul class="progressbar">
+                                            <li class="active">login</li>
+                                            <li class="active">Reference Number</li>
+                                            <li class="active">Boarding Pass</li>
+                                            <li class="active">Baggage Restriction</li>
+                                            <li class="active">Baggage Location</li>
+                                            <li>Done</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+            
+                        
+            <div class='flight-card'>
+                        <div class="logoalign">
+                            <div>
+                                <div>
+                                    <img src="ty.jpg" alt="" class="logo1">
+                                </div>
+                            </div>
+                        </div>
+
+                
+                        <div style="text-align: center" class="confirmnext">
+                                <div>
+                                    <div>
+                                        <input type="button" value="Confirm" id="buttonlocation"/>
+                                    </div>
+                                </div>
+                            </div>
+
+
+<script>
+         window.onscroll = function() {myFunction()};
+                                    
+            var header = document.getElementById("mycontainer");
+            var sticky = header.offsetTop;
+                                    
+                function myFunction() {
+                    if (window.pageYOffset > sticky) {
+                         header.classList.add("sticky");
+                     } else {
+                              header.classList.remove("sticky");
+                             }
+                    }
+
+                    window.onscroll = function() {myFunction()};
+                                    
+                                    var header = document.getElementById("mycontainer2");
+                                    var sticky = header.offsetTop;
+                                                            
+                                        function myFunction() {
+                                            if (window.pageYOffset > sticky) {
+                                                 header.classList.add("sticky");
+                                             } else {
+                                                      header.classList.remove("sticky");
+                                                     }
+                                            }
+
+                     document.getElementById("buttonlocation").onclick = function()
+                            {
+                                location.href = "home.html";
+                            }
+</script>
+         
+       
+</body>
+</html>
